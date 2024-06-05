@@ -10,7 +10,7 @@ const CLIENT_URL = process.env.CLIENT_URL;
 const oauth2Client = new google.auth.OAuth2(
     GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET,
-    CLIENT_URL
+    "https://basiccalendarapp.netlify.app"
 );
 
 const apiStatus = async (req, res, next) => {

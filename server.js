@@ -29,21 +29,21 @@ app.use("/auth", authRoutes);
 
 // --------------------- Deployment --------------------------
 
-const __dirname1 = path.resolve();
+// const __dirname1 = path.resolve();
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname1, "/frontend/src/app")));
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static(path.join(__dirname1, "/frontend/src/app")));
 
-    app.get("*", (req, res) =>
-        res.sendFile(
-            path.resolve(__dirname1, "frontend", "src", "app", "page.tsx")
-        )
-    );
-} else {
-    app.get("/", (req, res) => {
-        res.send("API is running..");
-    });
-}
+//     app.get("*", (req, res) =>
+//         res.sendFile(
+//             path.resolve(__dirname1, "frontend", "src", "app", "page.tsx")
+//         )
+//     );
+// } else {
+//     app.get("/", (req, res) => {
+//         res.send("API is running..");
+//     });
+// }
 
 // app.use("/users", userRoutes);
 
